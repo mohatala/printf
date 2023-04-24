@@ -5,12 +5,11 @@
  * Return: the length of the string.
  */
 
-int printf_str(va_list v)
+int printf_str(char *str)
 {
 	char *str;
 	int i, len;
 
-	str = va_arg(v, char *);
 	if (str == NULL)
 	{
 		str = "(null)";

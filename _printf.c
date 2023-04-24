@@ -18,7 +18,7 @@ int _printf(const char *format, ...)
 			switch (*format)
 			{
 				case 'c':
-					len += printf_c(va_arg(argz, int));
+					len += _putchar(va_arg(argz, int));
 					break;
 				case 's':
 					len += printf_str(va_arg(argz, char *));
