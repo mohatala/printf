@@ -1,7 +1,8 @@
 #include "main.h"
+
 /**
- * printf_s - print a string.
- * @v: argumen t.
+ * printf_str - print a string.
+ * @str: string parametre.
  * Return: the length of the string.
  */
 
