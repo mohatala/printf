@@ -11,7 +11,7 @@
 int _putchar(char c)
 {
 	char buf[1024];
-	int i;
+	int i=0;
 
 	if (c == -1 || i >= 1024)
 	{
