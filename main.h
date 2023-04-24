@@ -6,7 +6,7 @@
 
 int _putchar(char c);
 int _printf(const char *format, ...);
-int printf_p();
+int printf_p(void *p);
 int printf_task5();
 int printf_X();
 int printf_x();
