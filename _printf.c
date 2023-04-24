@@ -7,12 +7,7 @@
 int _printf(const char *format, ...)
 {
 	type_match type[] = {
-		{"%s", printf_s}, {"%c", printf_c},
-		{"%%", printf_percent},
-		{"%i", printf_i}, {"%d", printf_d}, {"%r", printf_r},
-		{"%R", printf_rot13}, {"%b", printf_b}, {"%u", printf_u},
-		{"%o", printf_o}, {"%x", printf_x}, {"%X", printf_X},
-		{"%S", printf_task5}, {"%p", printf_p}
+		{"%s", printf_str}, {"%c", printf_c}
 	};
 
 	va_list args;

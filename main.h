@@ -32,6 +32,6 @@ int printf_i(va_list args);
 int printf_d(va_list args);
 int printf_percent(void);
 int printf_c(va_list val);
-int printf_s(va_list val);
-
+int printf_str(va_list val);
+int _strlen(char *s);
 #endif
