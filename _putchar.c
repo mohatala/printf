@@ -1,5 +1,6 @@
 #include "main.h"
 #include <unistd.h>
+#define BUFFER_SIZE 1024
 
 /**
  * _putchar - print character c
@@ -10,15 +11,15 @@
  */
 int _putchar(char c)
 {
-	char buf[1024];
-	int i=0;
+	static char buf[BUFFER_SIZE];
+	static int i=0;
 
-	if (c == -1 || i >= 1024)
+	if (c == '\0' || i >= BUFFER_SIZE)
 	{
-		write(1, &buf, i);
+		write(1, buf, i);
 		i = 0;
 	}
-	if (c != -1)
+	if (c != '\0')
 	{
 		buf[i] = c;
 		i++;
