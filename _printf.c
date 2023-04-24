@@ -6,35 +6,35 @@
  */
 int _printf(const char *format, ...)
 {
-	type_match type[] = {
-		{"%s", printf_str}, {"%c", printf_c}
-	};
+	va_list argz;
+	int len = 0;
 
-	va_list args;
-	int i = 0, j, len = 0;
-
-	va_start(args, format);
-	if (format == NULL || (format[0] == '%' && format[1] == '\0'))
-		return (-1);
-
-Here:
-	while (format[i] != '\0')
+	va_start(argz, format);
+	while (*format)
 	{
-		j = 13;
-		while (j >= 0)
+		if (*format == '%')
 		{
-			if (type[j].id[0] == format[i] && type[j].id[1] == format[i + 1])
+			format++;
+			switch (*format)
 			{
-				len += type[j].f(args);
-				i = i + 2;
-				goto Here;
+				case 'c':
+					len += printf_c(va_arg(argz, int));
+					break;
+				case 's':
+					len += printf_str(va_arg(argz, char *));
+					break;
+				default:
+					len += _putchar('%');
+					len += _putchar(*(format - 1));
+					break;
 			}
-			j--;
 		}
-		_putchar(format[i]);
-		len++;
-		i++;
+		else
+		{
+			len += _putchar(*format);
+		}
+		format++;
 	}
-	va_end(args);
+	va_end(argz);
 	return (len);
 }
