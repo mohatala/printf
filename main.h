@@ -20,4 +20,5 @@ int printf_d();
 int printf_percent(void);
 int printf_str(char *str);
 int _strlen(char *s);
+int printf_hex_aux(unsigned long int num);
 #endif
