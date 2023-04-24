@@ -12,7 +12,7 @@ int printf_X(va_list val);
 int printf_x(va_list val);
 int printf_o(va_list val);
 int printf_u(va_list args);
-int printf_b(va_list val);
+int printf_b(unsigned int num);
 int printf_r(va_list args);
 int printf_rot13(va_list args);
 int printf_i(va_list args);

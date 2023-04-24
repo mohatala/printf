@@ -2,15 +2,14 @@
 
 /**
  * printf_b - prints a binary number.
- * @val: arguments.
+ * @num: arguments.
  * Return: 1.
  */
-int printf_b(va_list val)
+int printf_b(unsigned int num)
 {
 	int flag = 0;
 	int count = 0;
 	int i, a = 1, b;
-	unsigned int num = va_arg(val, unsigned int);
 	unsigned int p;
 
 	for (i = 0; i < 32; i++)

@@ -24,7 +24,7 @@ int _printf(const char *format, ...)
 					len += printf_str(va_arg(argz, char *));
 					break;
 				case 'b':
-					len += printf_b(va_arg(argz, char *));
+					len += printf_b(va_arg(argz, unsigned int));
 					break;
 				default:
 					len += _putchar('%');
