@@ -7,7 +7,6 @@
 
 int printf_str(char *str)
 {
-	char *str;
 	int i, len;
 
 	if (str == NULL)
