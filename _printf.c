@@ -26,6 +26,12 @@ int _printf(const char *format, ...)
 				case 'b':
 					len += printf_b(va_arg(argz, unsigned int));
 					break;
+				case 'i':
+					len += printf_i(va_arg(argz, int));
+					break;
+				case 'd':
+					len += printf_d(va_arg(argz, int));
+					break;
 				default:
 					len += _putchar('%');
 					len += _putchar(*(format - 1));
