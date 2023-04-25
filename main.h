@@ -7,7 +7,7 @@
 int _putchar(char c);
 int _printf(const char *format, ...);
 int printf_p(void *p);
-int printf_task5();
+int printf_S(char *str);
 int printf_X(unsigned int num);
 int printf_x(unsigned int num);
 int printf_o(unsigned int num);
